@@ -74,7 +74,7 @@ def send_view():
     text = data["text"]
     messages.append({"username" : username, "text" : text, "time" : time()})
 
-    msg_counter[username] +=1 #message counter
+    msg_counter[username] +=1
 
     return{'ok' : True}
 
@@ -95,7 +95,7 @@ def auth_view():
 
     if username not in users:
         users[username] = password
-        msg_counter[username] = 0 #message counter
+        msg_counter[username] = 0
         return{"ok" : True}
     elif users[username] == password:
         return{"ok" : True}
