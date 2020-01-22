@@ -1,7 +1,6 @@
 from flask import Flask, request
 from time import asctime, time
 from datetime import datetime
-import sys
 
 app = Flask(__name__)
 messages = [
